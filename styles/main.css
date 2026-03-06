@@ -89,3 +89,26 @@ body {
     display: none;
     font-size: 24px;
 }
+
+.Hambg:hover {
+  color: #007bff;
+}
+
+@media(maxwidth: 567px){
+    .nav-bar{
+        display: none;
+    }
+    .Hambg{
+        display: block;
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+    .sch-bar{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .sch-bar input{
+        width: 100%;
+    }
+}
