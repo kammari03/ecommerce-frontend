@@ -7,17 +7,33 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Online Store</h1>
+    <header class=" header">
+        <div class="container">
+
+            <div class="Logo"> Logo </div>
+
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="sch-bar">
+                <input type="text" placeholder="Search Product">
+                <button> Search </button>
+            </div>
+
+            <div class="cart">🛒
+                <span class="count">0</span>
+            </div>
+
+            <div class="Hambg">☰</div>
+
+       </div>
     </header>
     <script src="scripts/app.js"></script>
 </body>
 </html>
-🔹 Open styles/main.css and add basic styles:
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
