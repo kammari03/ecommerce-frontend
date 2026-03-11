@@ -181,6 +181,17 @@ body {
     }
 }
 
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero{
     height: 80vh;
     background: linear-gradient(135deg, #007bff, #00c6ff);
@@ -198,12 +209,14 @@ body {
     font-size: 52px;
     font-weight: bold;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards;
 }
 
 .hero-content p{
     font-size: 20px;
     margin-bottom: 30px;
     line-height: 1.5;
+    animation: fadeIn 1.3s ease forwards;
 }
 
 .hero-content{
@@ -219,8 +232,13 @@ body {
     font-weight: bold;
     border-radius: 30px;
     transition: 0.3s ease;
+    display: inline-block;
+    animation: fadeIn 1.6s ease forwards;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .cta-btn:hover{
-    background: #f2f2f2;
+    background: #f0f0f0;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
