@@ -151,4 +151,47 @@ body {
     .sch-bar input{
         width: 80%;
     }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+.hero{
+    height: 80vh;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    background: white;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover{
+    background: #f1f1f1;
 }
