@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Frontend</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Frontend</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class=" header">
-        <div class="container">
 
-            <div class="Logo"> Logo </div>
+<header class="header">
+  <div class="container">
 
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="#" >Home</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="logo">StartNow!</div>
 
-            <div class="sch-bar">
-                <input type="text" placeholder="Search Product">
-                <button> Search </button>
-            </div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-            <div class="cart">🛒
-                <span class="count">0</span>
-            </div>
+    <div class="sch-bar">
+      <input type="text" placeholder="Search Product">
+      <button>Search</button>
+    </div>
 
-            <div class="Hambg">☰</div>
+    <div class="cart">
+      🛒 <span class="cart-count">0</span>
+    </div>
 
-       </div>
-    </header>
+    <div class="Hambg">☰</div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Biggest Sale of the Year!</h1>
-            <p>Upto 50% off on top products and new arrivals.</p>
-            <p> Discover amazing deals on electronics, fashion, and more. </p>
-            <a href="#products" class="cta-btn"> Shop Now </a>
-        </div>
-    </section>
+  </div>
+</header>
 
-    <section id="products">
-        <h2>Our Products</h2>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Biggest Sale of the Year!</h1>
+    <p>Up to 50% off on top products and new arrivals.</p>
+    <a href="#products" class="cta-btn">Shop Now</a>
+  </div>
+</section>
 
-    <script src="scripts/app.js"></script>
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Products</h2>
+  <div class="productGrid" id="productGrid">
+
+<!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Wireless Headphones</h3>
+      <p class="price">$79</p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Smart Watch</h3>
+      <p class="price">$120</p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Bluetooth Speaker</h3>
+      <p class="price">$45</p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Gaming Mouse</h3>
+      <p class="price">$35</p>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="scripts/app.js"></script>
 </body>
 </html>
