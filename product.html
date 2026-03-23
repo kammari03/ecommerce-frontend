@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<!-- HEADER (same as index.html) -->
+<header class="header">
+  <div class="container">
+
+    <div class="logo">StartNow!</div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="sch-bar">
+      <input type="text" placeholder="Search Product">
+      <button>Search</button>
+    </div>
+
+    <div class="cart">
+      🛒 <span class="cart-count">0</span>
+    </div>
+
+    <div class="Hambg">☰</div>
+
+  </div>
+</header>
+
+<!-- PRODUCT DETAIL SECTION -->
+<section class="product-detail">
+  <div class="container detail-container">
+
+    <!-- LEFT: IMAGE + THUMBNAILS -->
+    <div class="product-gallery">
+      <img id="productImage" class="main-img" src="" alt="Product">
+
+      <!-- Optional thumbnails -->
+      <div class="thumbnails">
+        <img src="" class="thumb active">
+        <img src="" class="thumb">
+        <img src="" class="thumb">
+      </div>
+    </div>
+
+    <!-- RIGHT: PRODUCT INFO -->
+    <div class="product-info">
+      <h2 id="productTitle">Loading...</h2>
+
+      <p class="price" id="productPrice"></p>
+
+      <!-- Rating -->
+      <p class="rating">⭐ 4.5 / 5</p>
+
+      <p class="desc" id="productDesc"></p>
+
+      <!-- Variations -->
+      <div class="variations">
+        <label>Size:</label>
+        <select>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+
+        <label>Color:</label>
+        <select>
+          <option>Black</option>
+          <option>Blue</option>
+          <option>Red</option>
+        </select>
+      </div>
+
+      <!-- CTA -->
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 StartNow. All rights reserved.</p>
+</footer>
+
+<script src="scripts/product.js"></script>
+</body>
+</html>
