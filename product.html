@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<!-- HEADER (same as index.html) -->
+<!-- HEADER -->
 <header class="header">
   <div class="container">
 
-    <div class="logo">StartNow!</div>
+    <div class="logo">ShopNow!</div>
 
     <nav class="nav-bar">
       <ul>
@@ -24,28 +24,29 @@
     </nav>
 
     <div class="sch-bar">
-      <input type="text" placeholder="Search Product">
-      <button>Search</button>
+      <input type="text" placeholder="Search products...">
+      <button type="button">Search</button>
     </div>
 
     <div class="cart">
       🛒 <span class="cart-count">0</span>
     </div>
 
-    <div class="Hambg">☰</div>
+    <div class="hamburger">☰</div>
 
   </div>
 </header>
 
-<!-- PRODUCT DETAIL SECTION -->
+<!-- PRODUCT DETAIL -->
 <section class="product-detail">
   <div class="container detail-container">
 
-    <!-- LEFT: IMAGE + THUMBNAILS -->
+    <!-- LEFT: IMAGE -->
     <div class="product-gallery">
-      <img id="productImage" class="main-img" src="" alt="Product">
+      <div class="zoom-container">
+        <img id="productImage" class="main-img" src="" alt="Product Image">
+      </div>
 
-      <!-- Optional thumbnails -->
       <div class="thumbnails">
         <img src="" class="thumb active">
         <img src="" class="thumb">
@@ -53,44 +54,71 @@
       </div>
     </div>
 
-    <!-- RIGHT: PRODUCT INFO -->
+    <!-- RIGHT: INFO -->
     <div class="product-info">
       <h2 id="productTitle">Loading...</h2>
 
       <p class="price" id="productPrice"></p>
 
-      <!-- Rating -->
       <p class="rating">⭐ 4.5 / 5</p>
 
       <p class="desc" id="productDesc"></p>
 
-      <!-- Variations -->
+      <!-- VARIATIONS -->
       <div class="variations">
-        <label>Size:</label>
-        <select>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-        </select>
 
-        <label>Color:</label>
-        <select>
-          <option>Black</option>
-          <option>Blue</option>
-          <option>Red</option>
-        </select>
+        <!-- SIZE -->
+        <div class="variation-group">
+          <label>Size:</label>
+          <div class="options" id="sizeOptions">
+            <button type="button" class="option active">S</button>
+            <button type="button" class="option">M</button>
+            <button type="button" class="option">L</button>
+            <button type="button" class="option disabled">XL</button>
+          </div>
+        </div>
+
+        <!-- COLOR -->
+        <div class="variation-group">
+          <label>Color:</label>
+          <div class="options" id="colorOptions">
+            <button type="button" class="option active">Black</button>
+            <button type="button" class="option">Blue</button>
+            <button type="button" class="option disabled">Red</button>
+          </div>
+        </div>
+
       </div>
 
+      <!-- QUANTITY -->
+      <div class="quantity-section">
+        <label>Quantity:</label>
+
+        <div class="quantity-control">
+          <button type="button" id="decrease">−</button>
+          <span id="quantity">1</span>
+          <button type="button" id="increase">+</button>
+        </div>
+      </div>
+
+      <!-- TOTAL -->
+      <p class="total-price">
+        Total: <span id="totalPrice">$0</span>
+      </p>
+
       <!-- CTA -->
-      <button class="add-cart">Add to Cart</button>
+      <button type="button" class="add-cart">Add to Cart</button>
     </div>
 
   </div>
 </section>
 
+<!-- TOAST -->
+<div id="toast" class="toast">Added to cart ✅</div>
+
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 StartNow. All rights reserved.</p>
+  <p>© 2026 ShopNow. All rights reserved.</p>
 </footer>
 
 <script src="scripts/product.js"></script>

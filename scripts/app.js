@@ -1,15 +1,16 @@
 const productGrid = document.getElementById("productGrid");
 const cartCountEl = document.querySelector(".cart-count");
-const hamburger = document.querySelector(".Hambg");
+const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav-bar");
 
-let cartCount = 0;
+// HAMBURGER MENU
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
 
-
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
+// FETCH PRODUCTS
 async function fetchProducts() {
   try {
     const cachedData = localStorage.getItem("products");
@@ -45,14 +46,12 @@ async function fetchProducts() {
   }
 }
 
-
+// DISPLAY PRODUCTS
 function displayProducts(products) {
-
   productGrid.innerHTML = "";
   const fragment = document.createDocumentFragment();
 
   products.forEach(product => {
-
     const { id, title, price, image, description } = product;
 
     const card = document.createElement("div");
@@ -78,7 +77,7 @@ function displayProducts(products) {
   productGrid.appendChild(fragment);
 }
 
-
+// CART FUNCTIONS
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
@@ -89,27 +88,19 @@ function saveCart(cart) {
 
 function updateCartCount() {
   const cart = getCart();
-  const count = cart.length;
-
-  const cartEl = document.querySelector(".cart-count");
-  if (cartEl) cartEl.textContent = count;
+  if (cartCountEl) cartCountEl.textContent = cart.length;
 }
 
-
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("add-cart")) {
-    cartCount++;
-    cartCountEl.textContent = cartCount;
-  }
-});
-
+// ADD TO CART (single listener)
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("add-cart")) {
 
     const card = e.target.closest(".product-card");
 
     const title = card.querySelector("h3").textContent;
-    const price = card.querySelector(".price").textContent;
+    const price = parseFloat(
+      card.querySelector(".price").textContent.replace("$", "")
+    );
     const image = card.querySelector("img").src;
 
     const product = { title, price, image };
@@ -119,8 +110,23 @@ document.addEventListener("click", function (e) {
     saveCart(cart);
 
     updateCartCount();
+
+    showToast();
   }
 });
 
+// TOAST FUNCTION
+function showToast() {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
+
+// INIT
 updateCartCount();
 fetchProducts();
